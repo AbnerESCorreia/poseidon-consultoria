@@ -1,0 +1,41 @@
+@import "variables";
+
+.hero {
+  background-color: $poseidon-blue;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        $poseidon-blue 0%,
+        rgba($poseidon-blue, 0.8) 50%,
+        transparent 100%
+      );
+    }
+  }
+
+  &__title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+
+    span {
+      color: $poseidon-yellow;
+    }
+  }
+}

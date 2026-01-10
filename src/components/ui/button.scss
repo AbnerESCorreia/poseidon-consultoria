@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.btn-poseidon {
+  padding: 1rem 2.5rem;
+  border-radius: $border-radius;
+  transition: $transition;
+
+  &--primary {
+    background-color: $poseidon-yellow;
+    color: $poseidon-blue;
+
+    &:hover {
+      background-color: darken($poseidon-yellow, 10%);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid #fafafa;
+    background-color: transparent;
+    color: #fafafa;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fafafa;
+      color: $poseidon-blue;
+      opacity: 1;
+    }
+  }
+}
