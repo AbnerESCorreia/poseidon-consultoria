@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import ButtonPoseidon from "./ui/ButtonPoseidon";
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      className={`transition-all ${scrolled ? "scrolled" : "bg-transparent"}`}
-      variant="dark"
-    >
+    <Navbar expand="lg" fixed="top" className="navbar p-3" variant="dark">
       <Container>
         <Navbar.Brand href="#home" className="fw-bold fs-3">
           POSEIDON<span className="text-warning">.</span>

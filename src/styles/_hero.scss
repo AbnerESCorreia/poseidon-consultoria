@@ -22,7 +22,7 @@
       background: linear-gradient(
         90deg,
         $poseidon-blue 0%,
-        rgba($poseidon-blue, 0.8) 50%,
+        rgba($poseidon-blue, 0.9) 50%,
         transparent 100%
       );
     }
@@ -37,5 +37,23 @@
     span {
       color: $poseidon-yellow;
     }
+  }
+
+  &__description {
+    max-width: 600px; // Evita que o texto se espalhe demais em telas ultra-wide
+    line-height: 1.6; // Melhora a legibilidade entre as linhas
+  }
+
+  &__divider {
+    border: 0;
+    border-top: 1px solid $poseidon-white;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &__stats-number {
+    color: $poseidon-yellow;
+    display: block;
+    margin-bottom: -5px;
   }
 }

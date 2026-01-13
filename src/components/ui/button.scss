@@ -7,21 +7,25 @@
 
   &--primary {
     background-color: $poseidon-yellow;
+    border: 1px solid $poseidon-yellow;
     color: $poseidon-blue;
 
     &:hover {
-      background-color: darken($poseidon-yellow, 10%);
+      background-color: #aa793d;
+      border: 1px solid #aa793d;
+      color: $poseidon-blue;
     }
   }
 
   &--secondary {
-    border: 1px solid #fafafa;
+    border: 1px solid $poseidon-yellow;
     background-color: transparent;
-    color: #fafafa;
+    color: $poseidon-white;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #fafafa;
+      background-color: #aa793d;
+      border: 1px solid #aa793d;
       color: $poseidon-blue;
       opacity: 1;
     }

@@ -1,12 +1,22 @@
+import React from "react"; // Removidos useState e useRef se não forem usados em outro lugar
 import { Container } from "react-bootstrap";
 import ButtonPoseidon from "./ui/ButtonPoseidon";
-import heroImage from "../assets/hero-fitness.jpg";
+import CountUp from "react-countup";
+import video5 from "../assets/video5.mp4";
 
 const Hero = () => {
   return (
     <section className="hero vh-100 d-flex align-items-center position-relative text-white overflow-hidden">
+      {/* Background Video Player */}
       <div className="hero__background">
-        <img src={heroImage} alt="Fundo Poseidon" />
+        <video
+          src={video5}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="hero__video"
+        />
       </div>
 
       <Container className="position-relative z-3">
@@ -17,9 +27,9 @@ const Hero = () => {
           <span>CORPO E MENTE</span>
         </h1>
 
-        <p className="hero__description mt-3 opacity-75">
-          Treinos personalizados e metodologia exclusiva para quem busca
-          resultados de elite.
+        <p className="hero__description mt-3 opacity-75 fs-5">
+          Treinos personalizados, acompanhamento nutricional e resultados reais.
+          Alcance seus objetivos com orientação profissional.
         </p>
 
         <div className="d-flex gap-3 mt-4">
@@ -29,9 +39,29 @@ const Hero = () => {
           <ButtonPoseidon variant="secondary">Conheça os Planos</ButtonPoseidon>
         </div>
 
-        <div className="mt-5 d-flex gap-5 opacity-50 small fw-bold text-uppercase tracking-wider">
-          <span>500+ Alunos</span>
-          <span>10+ Anos Exp.</span>
+        <hr className="hero__divider mt-5 mb-4 opacity-25" />
+
+        <div className="d-flex gap-5 small text-uppercase tracking-wider">
+          <div className="d-flex flex-column">
+            <span className="hero__stats-number fw-bold fs-1">
+              <CountUp end={100} duration={3} suffix="+" enableScrollSpy />
+            </span>
+            <span className="opacity-50">Alunos</span>
+          </div>
+
+          <div className="d-flex flex-column">
+            <span className="hero__stats-number fw-bold fs-1">
+              <CountUp end={10} duration={4} suffix="+" enableScrollSpy />
+            </span>
+            <span className="opacity-50">Anos Exp.</span>
+          </div>
+
+          <div className="d-flex flex-column">
+            <span className="hero__stats-number fw-bold fs-1">
+              <CountUp end={95} duration={4} suffix="%" enableScrollSpy />
+            </span>
+            <span className="opacity-50">Satisfação</span>
+          </div>
         </div>
       </Container>
     </section>

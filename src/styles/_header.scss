@@ -2,32 +2,38 @@
 
 .navbar {
   transition: all 0.4s ease-in-out;
-  padding-top: 1.5rem;
 
-  // Estilo quando o usuário rola a página
-  &.scrolled {
-    padding-top: 0.8rem !important;
-    padding-bottom: 0.8rem !important;
+  background: rgba(1, 17, 38, 0.52) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
 
-    // Aplicando seu CSS de Glassmorphism
-    background: rgba(1, 17, 38, 0.52) !important;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.2px);
-    -webkit-backdrop-filter: blur(9.2px);
-    border: 1px solid rgba(1, 17, 38, 0.66);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
 
-    // Opcional: faz o header não encostar nas bordas para ressaltar o radius
-    margin: 10px 20px;
-    width: calc(100% - 40px);
-  }
+  .navbar-toggler {
+    margin-right: 0;
+    padding: 0.5rem;
+    border: none;
 
-  .nav-link {
-    color: rgba($poseidon-white, 0.8) !important;
-    font-weight: 500;
+    &:focus {
+      box-shadow: none;
+    }
 
-    &:hover {
-      color: $poseidon-yellow !important;
+    .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-link {
+      color: rgba($poseidon-white, 0.8) !important;
+      font-weight: 500;
+
+      &:hover {
+        color: $poseidon-yellow !important;
+      }
     }
   }
 }

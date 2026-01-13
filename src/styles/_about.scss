@@ -1,0 +1,42 @@
+@import "variables";
+
+.about {
+  background-color: $poseidon-blue;
+
+  &__badge {
+    color: $poseidon-yellow;
+  }
+
+  &__title {
+    color: $poseidon-white;
+    span {
+      color: $poseidon-yellow;
+    }
+  }
+
+  &__text {
+    color: rgba($poseidon-white, 0.7);
+  }
+
+  &__icon {
+    color: $poseidon-yellow;
+    display: flex;
+    align-items: center;
+  }
+
+  &__card {
+    background-color: #012340;
+    transition: $transition;
+
+    &:hover {
+      border: 0.2px solid #fafafa;
+      background-color: #03658c;
+      transform: translateY(-5px);
+
+      .about__icon {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
