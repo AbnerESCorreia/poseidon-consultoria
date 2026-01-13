@@ -1,39 +1,76 @@
 @use "variables" as *;
 
-.navbar {
-  transition: all 0.4s ease-in-out;
+.custom-navbar {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem 0; // Mais largo no topo
+  background: transparent !important;
 
-  background: rgba(1, 17, 38, 0.52) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.2px);
-  -webkit-backdrop-filter: blur(9.2px);
+  &.navbar-scrolled {
+    padding: 0.8rem 0;
+    background: rgba(1, 17, 38, 0.85) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
 
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
+  .logo-text {
+    letter-spacing: 2px;
+    .dot-yellow {
+      color: $poseidon-yellow;
+    }
+  }
 
+  .nav-links-container {
+    gap: 1.5rem; // Espaçamento moderno entre links
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7) !important;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $poseidon-yellow;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: white !important;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Estilo do botão de abrir no Mobile
   .navbar-toggler {
-    margin-right: 0;
-    padding: 0.5rem;
     border: none;
-
     &:focus {
       box-shadow: none;
     }
-
     .navbar-toggler-icon {
       filter: brightness(0) invert(1);
     }
+  }
+}
 
-    .nav-link {
-      color: rgba($poseidon-white, 0.8) !important;
-      font-weight: 500;
-
-      &:hover {
-        color: $poseidon-yellow !important;
-      }
-    }
+// Ajuste para o Menu Mobile aberto
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #011126;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
   }
 }
