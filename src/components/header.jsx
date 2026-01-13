@@ -17,6 +17,7 @@ const Header = () => {
             <Nav.Link href="#sobre">Sobre</Nav.Link>
             <Nav.Link href="#servicos">Serviços</Nav.Link>
             <Nav.Link href="#contato">Contato</Nav.Link>
+            <Nav.Link href="#testimonials">Testimonials</Nav.Link>
           </Nav>
           <ButtonPoseidon variant="secondary">Área do Aluno</ButtonPoseidon>
         </Navbar.Collapse>
