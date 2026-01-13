@@ -10,6 +10,11 @@ Uma landing page de alto padrão desenvolvida para a **Poseidon Consultoria**, f
 
 ---
 
+## 🎨 Preview do Projeto
+
+<img width="1903" height="939" alt="image" src="https://github.com/user-attachments/assets/ea05a6a0-5d51-440d-b152-2d75a5b3018e" />
+
+
 ## ✨ Funcionalidades
 
 - **CI/CD Automatizado:** Fluxo de trabalho configurado via **GitHub Actions**, garantindo build e deploy contínuos a cada atualização na branch master.
