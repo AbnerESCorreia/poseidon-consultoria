@@ -19,7 +19,7 @@ const Header = () => {
             <Nav.Link href="#testimonials">Testimonials</Nav.Link>
             <Nav.Link href="#contact">Contato</Nav.Link>
           </Nav>
-          <ButtonPoseidon variant="secondary">Área do Aluno</ButtonPoseidon>
+          <ButtonPoseidon type="secondary">Área do Aluno</ButtonPoseidon>
         </Navbar.Collapse>
       </Container>
     </Navbar>

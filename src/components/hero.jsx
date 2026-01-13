@@ -31,10 +31,8 @@ const Hero = () => {
         </p>
 
         <div className="d-flex gap-3 mt-4">
-          <ButtonPoseidon variant="primary">
-            Agende sua Avaliação
-          </ButtonPoseidon>
-          <ButtonPoseidon variant="secondary">Conheça os Planos</ButtonPoseidon>
+          <ButtonPoseidon type="primary">Agende sua Avaliação</ButtonPoseidon>
+          <ButtonPoseidon type="secondary">Conheça os Planos</ButtonPoseidon>
         </div>
 
         <hr className="hero__divider mt-5 mb-4 opacity-25" />

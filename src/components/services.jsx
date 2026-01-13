@@ -74,7 +74,7 @@ const Services = () => {
                     <li key={i}>{feature}</li>
                   ))}
                 </ul>
-                <ButtonPoseidon variant="primary">Assinar Agora</ButtonPoseidon>
+                <ButtonPoseidon type="secondary">Assinar Agora</ButtonPoseidon>
               </div>
             </Col>
           ))}

@@ -37,15 +37,15 @@
   }
 
   .custom-input {
-    background-color: $gray-400;
+    background-color: #010b18e0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     padding: 0.75rem 1rem;
     border-radius: 8px;
 
     &:focus {
-      background-color: #0c0c0c;
-      border-color: #ff6b00;
+      background-color: #01050ce0;
+      border-color: $poseidon-yellow;
       color: white;
       box-shadow: none;
     }
