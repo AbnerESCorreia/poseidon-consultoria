@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ButtonPoseidon from "./ui/ButtonPoseidon";
+import bgServicesVid from "../assets/bgServicesVid.mp4"; // Certifique-se da extensão correta
 
 const Services = () => {
   const plans = [
@@ -40,7 +41,10 @@ const Services = () => {
 
   return (
     <section id="services" className="services py-5">
-      <Container className="py-5 text-center">
+      <video autoPlay muted loop playsInline className="services__video">
+        <source src={bgServicesVid} type="video/mp4" />
+      </video>
+      <Container className="py-5 text-center services__content">
         <div className="text-center mb-5">
           <h6 className="services__badge fw-bold text-uppercase mb-3">
             Nossos Serviços
