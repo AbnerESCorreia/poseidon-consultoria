@@ -1,0 +1,91 @@
+@import "variables";
+
+.services {
+  background: #012340;
+
+  .service-card {
+    position: relative;
+    padding: 3rem 2rem;
+    height: 100%;
+    // Efeito Glassmorphism igual ao Header
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: $poseidon-yellow;
+    }
+
+    &--recommended {
+      border: 1px solid $poseidon-yellow;
+      background: rgba($poseidon-yellow, 0.05);
+    }
+
+    &__title {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    &__price {
+      color: white;
+      margin-bottom: 2rem;
+
+      .currency {
+        font-size: 1.2rem;
+        vertical-align: top;
+        margin-right: 4px;
+      }
+      .amount {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: $poseidon-yellow;
+      }
+      .period {
+        font-size: 0.9rem;
+        opacity: 0.6;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2.5rem;
+      flex-grow: 1;
+
+      li {
+        color: rgba(255, 255, 255, 0.8);
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+        &::before {
+          content: "✓";
+          color: $poseidon-yellow;
+          margin-right: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .badge-recommended {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $poseidon-yellow;
+      color: $poseidon-blue;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+}
