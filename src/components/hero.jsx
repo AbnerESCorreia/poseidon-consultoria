@@ -1,4 +1,3 @@
-import React from "react"; // Removidos useState e useRef se não forem usados em outro lugar
 import { Container } from "react-bootstrap";
 import ButtonPoseidon from "./ui/ButtonPoseidon";
 import CountUp from "react-countup";
@@ -7,7 +6,6 @@ import video5 from "../assets/video5.mp4";
 const Hero = () => {
   return (
     <section className="hero vh-100 d-flex align-items-center position-relative text-white overflow-hidden">
-      {/* Background Video Player */}
       <div className="hero__background">
         <video
           src={video5}

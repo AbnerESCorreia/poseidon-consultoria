@@ -55,7 +55,7 @@ const Testimonials = () => {
         <h2 className="display-5 fw-bold text-white">
           O que meus alunos dizem
         </h2>
-        <p className="mt-3 fs-5 text-white mb-5">
+        <p className="mt-3 fs-5 text-white mb-1">
           Treinos personalizados, acompanhamento nutricional e resultados reais.
           Alcance seus objetivos com orientação profissional.
         </p>
@@ -64,13 +64,15 @@ const Testimonials = () => {
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
+          loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-5"
+          autoHeight={false}
+          className="pb-5 pt-5"
         >
           {testimonials.map((t, index) => (
             <SwiperSlide key={index}>

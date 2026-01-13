@@ -2,43 +2,117 @@
 
 .testimonials {
   background-color: $poseidon-blue;
+  padding: 0px 0;
+  position: relative;
+
+  h2 {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  p.text-secondary {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .swiper {
+    .swiper-wrapper {
+      display: flex;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+  }
 
   .testimonial-card {
     background-color: #012340;
-    border: 1px solid rgba(255, 255, 255, 0.178);
-    border-radius: 12px;
-    padding: 2rem;
-    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+
     display: flex;
     flex-direction: column;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
 
     &:hover {
-      border-color: rgba($poseidon-yellow, 1);
+      border-color: $poseidon-yellow;
+      transform: translateY(-5px);
+    }
+
+    .stars {
+      color: $poseidon-yellow;
+      margin-bottom: 1.5rem;
+      display: flex;
+      gap: 4px;
+    }
+
+    .quote-icon {
+      color: rgba($poseidon-yellow, 0.2);
     }
 
     .testimonial-text {
-      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
       line-height: 1.6;
-      min-height: 80px;
+      font-style: italic;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .avatar-info {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
     }
 
     .avatar-circle {
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       background-color: rgba($poseidon-yellow, 0.1);
-      border: 1px solid rgba($poseidon-yellow, 0.3);
+      border: 1px solid rgba($poseidon-yellow, 0.4);
       color: $poseidon-yellow;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
-      font-size: 1.1rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-right: 15px;
     }
 
-    .quote-icon {
-      color: $poseidon-yellow;
+    h6 {
+      color: #ffffff;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    small {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    margin: 0 6px;
+
+    &-active {
+      background: $poseidon-yellow;
+      width: 35px;
     }
   }
 }

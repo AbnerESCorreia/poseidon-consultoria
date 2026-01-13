@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 import {
@@ -61,7 +60,6 @@ const About = () => {
                 <Col md={6} key={index}>
                   <Card className="about__card p-3 h-100">
                     <Card.Body>
-                      {/* O ícone herda a cor definida no SCSS */}
                       <div className="about__icon mb-3">{f.icon}</div>
                       <Card.Title className="fw-bold text-white h5">
                         {f.title}

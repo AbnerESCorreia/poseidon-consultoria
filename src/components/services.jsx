@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ButtonPoseidon from "./ui/ButtonPoseidon";
 
@@ -75,12 +74,7 @@ const Services = () => {
                     <li key={i}>{feature}</li>
                   ))}
                 </ul>
-                <ButtonPoseidon
-                  variant={plan.recommended ? "primary" : "secondary"}
-                  className="w-100"
-                >
-                  Assinar Agora
-                </ButtonPoseidon>
+                <ButtonPoseidon variant="primary">Assinar Agora</ButtonPoseidon>
               </div>
             </Col>
           ))}

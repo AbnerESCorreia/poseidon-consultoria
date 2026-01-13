@@ -1,9 +1,7 @@
 @import "../../styles/variables";
 
 .btn-poseidon {
-  padding: 1rem 2.5rem;
   border-radius: $border-radius;
-  transition: $transition;
 
   &--primary {
     background-color: $poseidon-yellow;
@@ -11,8 +9,8 @@
     color: $poseidon-blue;
 
     &:hover {
-      background-color: #aa793d;
-      border: 1px solid #aa793d;
+      background-color: #ca924d;
+      border: 1px solid #ca924d;
       color: $poseidon-blue;
     }
   }
@@ -24,10 +22,9 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #aa793d;
-      border: 1px solid #aa793d;
+      background-color: #ca924d;
+      border: 1px solid #ca924d;
       color: $poseidon-blue;
-      opacity: 1;
     }
   }
 }
