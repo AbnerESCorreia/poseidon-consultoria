@@ -5,6 +5,7 @@ import Services from "./components/services";
 import "./styles/main.scss";
 import Testimonials from "./components/testimonials";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <div id="home">
           <Hero />
         </div>
-        <div id="sobre">
+        <div id="about">
           <About />
         </div>
         <div id="services">
@@ -27,6 +28,7 @@ function App() {
           <Contact />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

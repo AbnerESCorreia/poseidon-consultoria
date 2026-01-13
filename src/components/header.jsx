@@ -14,12 +14,14 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#sobre">Sobre</Nav.Link>
-            <Nav.Link href="#servicos">Serviços</Nav.Link>
-            <Nav.Link href="#testimonials">Testimonials</Nav.Link>
+            <Nav.Link href="#about">Sobre</Nav.Link>
+            <Nav.Link href="#services">Serviços</Nav.Link>
+            <Nav.Link href="#testimonials">Depoimentos</Nav.Link>
             <Nav.Link href="#contact">Contato</Nav.Link>
           </Nav>
-          <ButtonPoseidon type="secondary">Área do Aluno</ButtonPoseidon>
+          <ButtonPoseidon type="secondary" href="https://wa.me/5511977129082">
+            Contatar
+          </ButtonPoseidon>
         </Navbar.Collapse>
       </Container>
     </Navbar>

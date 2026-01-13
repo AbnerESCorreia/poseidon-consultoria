@@ -2,13 +2,17 @@
 
 .contact {
   background-color: #012340;
+  overflow: hidden;
 
   &__badge {
     color: $poseidon-yellow;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
   }
 
   &__text {
     color: rgba($poseidon-white, 0.7);
+    max-width: 550px;
   }
 
   &__title {
@@ -18,15 +22,43 @@
     }
   }
 
+  // Estilo para os itens de contato clicáveis
+  .contact-item-link {
+    text-decoration: none; // Remove o sublinhado padrão
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateX(8px); // Desliza levemente para a direita
+
+      .icon-box {
+        background: rgba($poseidon-yellow, 0.25);
+        color: $poseidon-yellow;
+        box-shadow: 0 0 15px rgba($poseidon-yellow, 0.1);
+      }
+
+      span {
+        color: $poseidon-yellow !important; // Muda a cor do texto no hover
+      }
+    }
+  }
+
   .icon-box {
     width: 45px;
     height: 45px;
-    background: rgba(255, 107, 0, 0.1);
+    background: rgba(
+      255,
+      107,
+      0,
+      0.1
+    ); // Pode trocar por rgba($poseidon-yellow, 0.1) se preferir
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $poseidon-yellow;
+    transition: all 0.3s ease;
+    flex-shrink: 0; // Impede que o ícone amasse em telas pequenas
   }
 
   .contact-card {
@@ -34,6 +66,7 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px); // Efeito de vidro sutil
   }
 
   .custom-input {
@@ -42,12 +75,14 @@
     color: white;
     padding: 0.75rem 1rem;
     border-radius: 8px;
+    transition: all 0.3s ease;
 
     &:focus {
       background-color: #01050ce0;
       border-color: $poseidon-yellow;
       color: white;
-      box-shadow: none;
+      box-shadow: 0 0 0 0.2rem rgba($poseidon-yellow, 0.1);
+      outline: none;
     }
 
     &::placeholder {
@@ -56,16 +91,29 @@
     }
   }
 
-  .btn-orange {
-    background-color: #ff6b00;
-    border: none;
-    color: white;
-    transition: all 0.3s ease;
+  // Ajuste para o rótulo (label) acima dos inputs
+  .form-label {
+    color: rgba($poseidon-white, 0.6);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+}
 
-    &:hover {
-      background-color: #e66000;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+// Ajuste responsivo para centralizar em telas pequenas
+@media (max-width: 991.98px) {
+  .contact {
+    text-align: center;
+    .contact-item-link {
+      justify-content: center;
+      &:hover {
+        transform: translateY(
+          -3px
+        ); // No mobile, flutua para cima em vez de pro lado
+      }
+    }
+    &__text {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

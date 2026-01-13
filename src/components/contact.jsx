@@ -30,25 +30,35 @@ const Contact = () => {
                 {
                   icon: <RiMapPinLine />,
                   label: "Localização",
-                  value: "Academia FitCenter - São Paulo, SP",
+                  value: "Em sua casa!",
+                  link: "https://maps.google.com", // Opcional: pode colocar um link do Maps aqui
                 },
                 {
                   icon: <RiWhatsappLine />,
                   label: "WhatsApp",
-                  value: "(11) 99999-9999",
+                  value: "+55 11 97712-9082",
+                  link: "https://wa.me/5511977129082", // Abre o WhatsApp diretamente
                 },
                 {
                   icon: <RiMailLine />,
                   label: "Email",
-                  value: "contato@fitpro.com.br",
+                  value: "contato@consultoriaposeidon.com.br",
+                  link: "mailto:contato@consultoriaposeidon.com.br", // Abre o app de email padrão
                 },
                 {
                   icon: <RiInstagramLine />,
                   label: "Instagram",
-                  value: "@fitpro_personal",
+                  value: "@consultoriaposeidon",
+                  link: "https://www.instagram.com/consultoriaposeidon", // Abre o perfil no Instagram
                 },
               ].map((item, index) => (
-                <div key={index} className="d-flex align-items-center mb-4">
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="d-flex align-items-center mb-4 text-decoration-none contact-item-link"
+                >
                   <div className="icon-box me-3">{item.icon}</div>
                   <div>
                     <small className="text-secondary d-block">
@@ -56,7 +66,7 @@ const Contact = () => {
                     </small>
                     <span className="text-white fw-medium">{item.value}</span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </Col>

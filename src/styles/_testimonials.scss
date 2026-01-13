@@ -5,8 +5,22 @@
   padding: 0px 0;
   position: relative;
 
+  &__badge {
+    color: $poseidon-yellow;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+  }
+
   &__text {
     color: rgba($poseidon-white, 0.7);
+    max-width: 550px;
+  }
+
+  &__title {
+    color: $poseidon-white;
+    span {
+      color: $poseidon-yellow;
+    }
   }
 
   h2 {

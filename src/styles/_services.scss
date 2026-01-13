@@ -7,6 +7,24 @@
   background-attachment: fixed;
   padding: 100px 0;
 
+  &__badge {
+    color: $poseidon-yellow;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+  }
+
+  &__text {
+    color: rgba($poseidon-white, 0.7);
+    max-width: 550px;
+  }
+
+  &__title {
+    color: $poseidon-white;
+    span {
+      color: $poseidon-yellow;
+    }
+  }
+
   .service-card {
     position: relative;
     padding: 3rem 2rem;

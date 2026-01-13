@@ -39,14 +39,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="services py-5">
-      <Container className="py-5">
+    <section id="services" className="services py-5">
+      <Container className="py-5 text-center">
         <div className="text-center mb-5">
-          <h6 className="text-warning text-uppercase tracking-widest">
+          <h6 className="services__badge fw-bold text-uppercase mb-3">
             Nossos Serviços
           </h6>
           <h2 className="display-4 fw-bold text-white">Escolha seu Plano</h2>
-          <p className="mt-3 fs-5 text-white">
+          <p className="testimonials__text lead mb-4 mx-auto">
             Treinos personalizados, acompanhamento nutricional e resultados
             reais. Alcance seus objetivos com orientação profissional.
           </p>

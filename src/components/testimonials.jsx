@@ -49,13 +49,13 @@ const Testimonials = () => {
   return (
     <section className="testimonials py-5">
       <Container className="py-5 text-center">
-        <h6 className="text-warning text-uppercase mb-2 tracking-widest">
+        <h6 className="testimonials__badge fw-bold text-uppercase mb-3">
           Depoimentos
         </h6>
         <h2 className="display-5 fw-bold text-white">
           O que meus alunos dizem
         </h2>
-        <p className="testimonials__text lead mb-4">
+        <p className="testimonials__text lead mb-4 mx-auto">
           Treinos personalizados, acompanhamento nutricional e resultados reais.
           Alcance seus objetivos com orientação profissional.
         </p>
