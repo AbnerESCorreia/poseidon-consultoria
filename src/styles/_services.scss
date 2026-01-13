@@ -1,10 +1,10 @@
-@import "variables";
+@use "variables" as *;
 
 .services {
   position: relative;
-  background: url("../assets/bgServices.png") no-repeat center center; // Ajuste o caminho da imagem
+  background: url("../assets/bgServices.png") no-repeat center center;
   background-size: cover;
-  background-attachment: fixed; // Cria um efeito de profundidade (opcional)
+  background-attachment: fixed;
   padding: 100px 0;
 
   .service-card {
@@ -16,7 +16,11 @@
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    background-color: #012340;
+
+    background: rgba(1, 17, 38, 0.52);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
 
     &:hover {
       transform: translateY(-10px);

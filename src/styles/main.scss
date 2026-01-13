@@ -1,8 +1,8 @@
-@import "variables";
-@import "~bootstrap/scss/bootstrap";
-@import "../components/ui/button";
-@import "header";
-@import "hero";
-@import "about";
-@import "services";
-@import "testimonials";
+@use "variables" as *;
+@use "bootstrap/scss/bootstrap";
+@use "../components/ui/button";
+@use "header";
+@use "hero";
+@use "about";
+@use "services";
+@use "testimonials";

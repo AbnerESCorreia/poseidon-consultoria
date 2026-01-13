@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables" as *;
 
 .hero {
   background-color: $poseidon-blue;
@@ -40,8 +40,8 @@
   }
 
   &__description {
-    max-width: 600px; // Evita que o texto se espalhe demais em telas ultra-wide
-    line-height: 1.6; // Melhora a legibilidade entre as linhas
+    max-width: 600px;
+    line-height: 1.6;
   }
 
   &__divider {
