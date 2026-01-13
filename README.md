@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🔱 Poseidon Consultoria — Landing Page Premium
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/abnerescorreia/poseidon-consultoria?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/abnerescorreia/poseidon-consultoria?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/abnerescorreia/poseidon-consultoria?style=for-the-badge)
 
-## Available Scripts
+Uma landing page de alto padrão desenvolvida para a **Poseidon Consultoria**, focada em serviços de personal trainer e consultoria fitness. O projeto utiliza uma estética "Dark & Gold" para transmitir exclusividade e autoridade, utilizando tecnologias modernas de desenvolvimento web.
 
-In the project directory, you can run:
+🚀 **Acesse o projeto:** [Link para o Site Poseidon](https://abnerescorreia.github.io/poseidon-consultoria/)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser. abnt
+## 🎨 Preview do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1903" height="939" alt="image" src="https://github.com/user-attachments/assets/ea05a6a0-5d51-440d-b152-2d75a5b3018e" />
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Funcionalidades
 
-### `npm run build`
+- **CI/CD Automatizado:** Fluxo de trabalho configurado via **GitHub Actions**, garantindo build e deploy contínuos a cada atualização na branch master.
+- **Floating Glassmorphism Header:** Navbar flutuante com efeito de desfoque e bordas arredondadas, proporcionando uma navegação fluida e moderna.
+- **Layout de Conversão Alinhado:** Seção de contato estrategicamente desenhada com alinhamento vertical perfeito entre formulário e canais de atendimento.
+- **Arquitetura Modular:** Interface construída em **React**, permitindo a reutilização de componentes e facilidade na manutenção do código.
+- **Experiência Imersiva:** Integração de vídeos e mídias otimizadas para carregamento rápido e impacto visual imediato.
+- **Mobile First:** Grid inteligente que adapta a lista de contatos para um formato 2x2 em dispositivos móveis, priorizando a usabilidade.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React.js](https://reactjs.org/) - Framework principal para a construção de interfaces reativas.
+- [SASS / SCSS](https://sass-lang.com/) - Organização de estilos através de variáveis e arquitetura modular.
+- [React Bootstrap](https://react-bootstrap.github.io/) - Agilidade no sistema de grids e componentes responsivos.
+- [GitHub Actions](https://github.com/features/actions) - Automação de processos de deploy (CI/CD).
+- [React Icons](https://react-icons.github.io/react-icons/) - Conjunto de ícones vetoriais de alta qualidade.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧠 Desafios Técnicos Superados
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Deploy Automático com React:** Configuração do arquivo `deploy.yml` para compilar o projeto e gerenciar o roteamento direto para o GitHub Pages de forma automatizada.
+2. **Alinhamento de Layout Complexo:** Aplicação de `align-items-stretch` para nivelar visualmente colunas de alturas diferentes na seção de contato.
+3. **Gestão de Assets:** Organização de diretórios e importação de mídias para garantir compatibilidade entre o ambiente de desenvolvimento e produção.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Como rodar o projeto localmente
 
-## Learn More
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/AbnerESCorreia/poseidon-consultoria.git](https://github.com/AbnerESCorreia/poseidon-consultoria.git)
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm start
+    ```
 
-### Code Splitting
+## 📂 Estrutura de Pastas Principais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* `src/assets/`: Contém mídias como o logo e vídeos de fundo.
+* `src/components/`: Componentes modulares como Header, Contact e UI.
+* `src/styles/`: Arquivos SCSS com as variáveis de cores da marca.
+* `.github/workflows/`: Configurações do deploy automático.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👤 Autor
+- Abner E. S. Correia
+- LinkedIn: https://www.linkedin.com/in/abner-c-33a983106/?skipRedirect=true
+- GitHub: @abnerescorreia
