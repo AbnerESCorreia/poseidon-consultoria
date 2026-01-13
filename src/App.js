@@ -4,6 +4,7 @@ import About from "./components/about";
 import Services from "./components/services";
 import "./styles/main.scss";
 import Testimonials from "./components/testimonials";
+import Contact from "./components/contact";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </div>
         <div id="testimonials">
           <Testimonials />
+        </div>
+        <div id="contact">
+          <Contact />
         </div>
       </main>
     </div>

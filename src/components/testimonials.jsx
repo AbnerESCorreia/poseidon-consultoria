@@ -55,7 +55,7 @@ const Testimonials = () => {
         <h2 className="display-5 fw-bold text-white">
           O que meus alunos dizem
         </h2>
-        <p className="mt-3 fs-5 text-white mb-1">
+        <p className="testimonials__text lead mb-4">
           Treinos personalizados, acompanhamento nutricional e resultados reais.
           Alcance seus objetivos com orientação profissional.
         </p>
