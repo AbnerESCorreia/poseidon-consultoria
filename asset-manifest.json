@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/poseidon-consultoria/static/css/main.a84d7adb.css",
+    "main.js": "/poseidon-consultoria/static/js/main.f303c676.js",
+    "static/js/453.e79858ba.chunk.js": "/poseidon-consultoria/static/js/453.e79858ba.chunk.js",
+    "static/media/video5.mp4": "/poseidon-consultoria/static/media/video5.0608549eb7a29219bece.mp4",
+    "static/media/bgServices.png": "/poseidon-consultoria/static/media/bgServices.cefe69b51153c93ccd8a.png",
+    "index.html": "/poseidon-consultoria/index.html",
+    "main.a84d7adb.css.map": "/poseidon-consultoria/static/css/main.a84d7adb.css.map",
+    "main.f303c676.js.map": "/poseidon-consultoria/static/js/main.f303c676.js.map",
+    "453.e79858ba.chunk.js.map": "/poseidon-consultoria/static/js/453.e79858ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a84d7adb.css",
+    "static/js/main.f303c676.js"
+  ]
+}
