@@ -6,114 +6,94 @@
 
   &__badge {
     color: $poseidon-yellow;
-    letter-spacing: 1.5px;
-    font-size: 0.85rem;
-  }
-
-  &__text {
-    color: rgba($poseidon-white, 0.7);
-    max-width: 550px;
+    letter-spacing: 2px;
   }
 
   &__title {
-    color: $poseidon-white;
+    color: white;
     span {
       color: $poseidon-yellow;
     }
   }
 
-  // Estilo para os itens de contato clicáveis
   .contact-item-link {
-    text-decoration: none; // Remove o sublinhado padrão
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 15px;
+    text-decoration: none;
     transition: all 0.3s ease;
-    cursor: pointer;
 
     &:hover {
-      transform: translateX(8px); // Desliza levemente para a direita
+      background: rgba($poseidon-yellow, 0.1);
+      border-color: $poseidon-yellow;
+      transform: translateY(-3px);
+    }
 
-      .icon-box {
-        background: rgba($poseidon-yellow, 0.25);
-        color: $poseidon-yellow;
-        box-shadow: 0 0 15px rgba($poseidon-yellow, 0.1);
-      }
+    .icon-box {
+      min-width: 45px;
+      height: 45px;
+      background: $poseidon-yellow;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 1.4rem;
+    }
 
-      span {
-        color: $poseidon-yellow !important; // Muda a cor do texto no hover
-      }
+    .label-text {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .value-text {
+      color: white;
+      font-size: 0.85rem;
+      word-break: break-all; // Crucial para e-mails longos no mobile
     }
   }
 
-  .icon-box {
-    width: 45px;
-    height: 45px;
-    background: rgba(
-      255,
-      107,
-      0,
-      0.1
-    ); // Pode trocar por rgba($poseidon-yellow, 0.1) se preferir
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $poseidon-yellow;
-    transition: all 0.3s ease;
-    flex-shrink: 0; // Impede que o ícone amasse em telas pequenas
-  }
-
   .contact-card {
-    background-color: $poseidon-blue;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px); // Efeito de vidro sutil
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .custom-input {
-    background-color: #010b18e0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 0.8rem;
+    border-radius: 10px;
 
     &:focus {
-      background-color: #01050ce0;
-      border-color: $poseidon-yellow;
-      color: white;
-      box-shadow: 0 0 0 0.2rem rgba($poseidon-yellow, 0.1);
-      outline: none;
+      background: rgba(255, 255, 255, 0.08) !important;
+      border-color: $poseidon-yellow !important;
+      box-shadow: none;
     }
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.3);
-      font-size: 0.9rem;
     }
-  }
-
-  // Ajuste para o rótulo (label) acima dos inputs
-  .form-label {
-    color: rgba($poseidon-white, 0.6);
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
   }
 }
 
-// Ajuste responsivo para centralizar em telas pequenas
-@media (max-width: 991.98px) {
-  .contact {
+// Media Query para ajustes finos no mobile
+@media (max-width: 767px) {
+  .contact-item-link {
+    padding: 0.8rem;
+    flex-direction: column;
     text-align: center;
-    .contact-item-link {
-      justify-content: center;
-      &:hover {
-        transform: translateY(
-          -3px
-        ); // No mobile, flutua para cima em vez de pro lado
-      }
+
+    .icon-box {
+      margin: 0 0 10px 0 !important;
     }
-    &__text {
-      margin-left: auto;
-      margin-right: auto;
+
+    .value-text {
+      font-size: 0.75rem;
     }
   }
 }

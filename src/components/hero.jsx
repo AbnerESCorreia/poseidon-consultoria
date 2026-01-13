@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
 
       <Container className="position-relative z-3">
-        <p className="hero__subtitle mb-2">Consultoria Online & Presencial</p>
+        <h6 className="mb-2">Consultoria Online & Presencial</h6>
 
         <h1 className="hero__title fw-bold">
           DOMINE O SEU <br />
@@ -35,7 +35,7 @@ const Hero = () => {
           <ButtonPoseidon type="secondary">Conheça os Planos</ButtonPoseidon>
         </div>
 
-        <hr className="hero__divider mt-5 mb-4 opacity-25" />
+        <hr className="hero__divider mt-4 mb-2 opacity-25" />
 
         <div className="d-flex gap-5 small text-uppercase tracking-wider">
           <div className="d-flex flex-column">
