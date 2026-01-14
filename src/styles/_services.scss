@@ -66,6 +66,10 @@
       border-color: $poseidon-yellow;
     }
 
+    span {
+      color: $gray-400;
+    }
+
     &--recommended {
       border: 2px solid $poseidon-yellow;
       background: rgba($poseidon-yellow, 0.05);
@@ -117,6 +121,10 @@
         display: flex;
         justify-content: space-between;
         font-size: 0.85rem;
+
+        span {
+          color: $gray-400;
+        }
         strong {
           color: white;
         }
@@ -127,6 +135,7 @@
       list-style: none;
       padding: 0;
       margin-bottom: 2.5rem;
+      color: $gray-300;
       li {
         &.included::before {
           content: "✓";
@@ -134,7 +143,7 @@
           margin-right: 12px;
         }
         &.not-included {
-          color: rgba(255, 255, 255, 0.3);
+          color: rgba(102, 100, 100, 0.836);
           text-decoration: line-through;
           &::before {
             content: "✕";
@@ -160,8 +169,16 @@
       transition: all 0.3s ease;
       text-align: center;
 
+      h4 {
+        color: $gray-300;
+      }
+
+      p {
+        color: $gray-400;
+      }
+
       strong {
-        color: white;
+        color: $gray-400;
         font-size: 1.1rem;
         display: block; // Empilha os descontos e parcelas
       }
@@ -169,6 +186,7 @@
       &:hover {
         border-color: $poseidon-yellow;
         transform: translateY(-5px);
+        background-color: #0009140c;
       }
 
       &.highlight {

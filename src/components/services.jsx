@@ -112,7 +112,16 @@ const Services = () => {
 
                 <ButtonPoseidon
                   type={plan.recommended ? "primary" : "secondary"}
-                  className="w-100 mt-auto"
+                  className="w-100 mt-auto fw-bold"
+                  onClick={() => {
+                    const msg = encodeURIComponent(
+                      `Olá! Gostaria de assinar o ${plan.title}.`
+                    );
+                    window.open(
+                      `https://wa.me/5511977129082?text=${msg}`,
+                      "_blank"
+                    );
+                  }}
                 >
                   Assinar Agora
                 </ButtonPoseidon>
@@ -126,16 +135,16 @@ const Services = () => {
           <Row className="justify-content-center g-3">
             <Col md={4}>
               <div className="discount-pill">
-                <span>Trimestral</span>
+                <h4 className="mb-2 fw-bold">Trimestral</h4>
                 <strong>10% de Desconto</strong>
-                <p className="m-0 text-white">3x sem juros</p>
+                <p className="m-0">3x sem juros</p>
               </div>
             </Col>
             <Col md={4}>
               <div className="discount-pill">
-                <span>Semestral</span>
+                <h4 className="mb-2 fw-bold">Semestral</h4>
                 <strong>20% de Desconto</strong>
-                <p className="m-0 text-white">6x sem juros</p>
+                <p className="m-0">6x sem juros</p>
               </div>
             </Col>
           </Row>
