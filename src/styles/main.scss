@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "bootstrap/scss/bootstrap";
-@use "../components/ui/button";
+@use "ui/ButtonPoseidon";
+@use "ui/BaseModal";
 @use "header";
 @use "hero";
 @use "about";

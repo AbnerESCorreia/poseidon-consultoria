@@ -1,0 +1,85 @@
+@use "../variables" as *;
+
+// Estilização da "caixa" principal do Modal
+.poseidon-modal-content {
+  background-color: #010d1c !important; // Azul escuro profundo
+  border: 1px solid rgba($poseidon-yellow, 0.3) !important; // Borda dourada sutil
+  border-radius: 20px !important;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+  color-scheme: dark; // Avisa ao navegador para usar scrollbars e elementos nativos escuros
+
+  // Botão de fechar (X)
+  .modal-header {
+    .btn-close {
+      filter: invert(1); // Torna o ícone branco
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Estilo para Inputs e Selects
+  .form-control,
+  .form-select {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.12
+    ) !important; // Fundo mais claro para visibilidade
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 12px 15px !important;
+    transition: all 0.3s ease;
+
+    // Remove o contorno azul (outline) e a sombra (box-shadow) do Bootstrap
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important; // Remove o brilho azul indesejado
+      border-color: $poseidon-yellow !important; // Troca pelo dourado da marca
+      background-color: rgba(255, 255, 255, 0.18) !important;
+    }
+
+    // Cor do Placeholder (texto de exemplo)
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important; // Branco suave
+      font-size: 0.9rem;
+    }
+  }
+
+  // Estilo específico para o Dropdown do Select (remove o fundo branco)
+  .form-select {
+    cursor: pointer;
+
+    option {
+      background-color: #010d1c !important; // Fundo escuro nas opções
+      color: white !important;
+    }
+  }
+
+  // Labels (títulos dos campos)
+  .form-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+// Classe para campos que o usuário não pode editar (ex: Plano e Valor)
+.input-locked {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: $poseidon-yellow !important; // Texto em destaque dourado
+  border: 1px solid rgba($poseidon-yellow, 0.2) !important;
+  font-weight: 600;
+  cursor: not-allowed;
+  pointer-events: none; // Impede cliques
+}
