@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Container, Row, Col, Card, Form } from "react-bootstrap";
+import { z } from "zod";
 import {
   RiInstagramLine,
   RiMailLine,
@@ -8,6 +10,19 @@ import {
 import ButtonPoseidon from "./ui/ButtonPoseidon";
 
 const Contact = () => {
+  const [errors, setErrors] = useState({});
+
+  // Regras de Validação (Nome, Tel 10-11 dígitos e Mensagem mínima)
+  const contactSchema = z.object({
+    nome: z.string().min(3, "Digite seu nome completo"),
+    telefone: z
+      .string()
+      .min(10, "DDD + Número (mínimo 10 dígitos)")
+      .max(11, "Máximo 11 dígitos"),
+    email: z.string().email("Digite um e-mail válido"),
+    objetivo: z.string().min(10, "Conte um pouco mais sobre seu objetivo"),
+  });
+
   const contactItems = [
     {
       icon: <RiMapPinLine />,
@@ -35,10 +50,40 @@ const Contact = () => {
     },
   ];
 
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+
+    const data = {
+      nome: document.getElementById("contact_name").value,
+      telefone: document.getElementById("contact_phone").value,
+      email: document.getElementById("contact_email").value,
+      objetivo: document.getElementById("contact_objective").value,
+    };
+
+    const validation = contactSchema.safeParse(data);
+
+    if (!validation.success) {
+      setErrors(validation.error.flatten().fieldErrors);
+      return;
+    }
+
+    setErrors({});
+
+    // Formatação da mensagem para o WhatsApp
+    const msg =
+      `🔱 *CONTATO SITE - POSEIDON* 🔱%0A%0A` +
+      `👤 *Nome:* ${data.nome}%0A` +
+      `📱 *Telefone:* ${data.telefone}%0A` +
+      `📧 *Email:* ${data.email}%0A` +
+      `🎯 *Objetivo:* ${data.objetivo}`;
+
+    const meuWhats = "5511977129082";
+    window.open(`https://wa.me/${meuWhats}?text=${msg}`, "_blank");
+  };
+
   return (
     <section className="contact py-5" id="contact">
       <Container className="py-5">
-        {/* align-items-stretch é a chave para o alinhamento lateral */}
         <Row className="g-4 g-lg-5 align-items-stretch text-start">
           {/* Coluna da Esquerda */}
           <Col lg={6} className="d-flex flex-column">
@@ -55,7 +100,6 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Grid de Itens de Contato */}
             <div className="contact-info-grid row row-cols-2 row-cols-md-1 g-3">
               {contactItems.map((item, index) => (
                 <div key={index} className="col">
@@ -76,56 +120,102 @@ const Contact = () => {
             </div>
           </Col>
 
-          {/* Coluna da Direita (Card) */}
+          {/* Coluna da Direita (Card de Formulário) */}
           <Col lg={6}>
-            <Card className="contact-card border-0 p-4 p-md-5 h-100">
+            <Card className="contact-card border-0 p-4 p-md-5 h-100 shadow-lg">
               <h4 className="text-white mb-4 mt-0">Envie uma mensagem</h4>
-              <Form className="h-100 d-flex flex-column justify-content-between">
+              <Form
+                onSubmit={handleSendMessage}
+                className="h-100 d-flex flex-column"
+              >
                 <Row className="g-3">
                   <Col md={6}>
                     <Form.Label className="text-secondary small mb-1">
                       Nome
                     </Form.Label>
                     <Form.Control
+                      id="contact_name"
                       type="text"
-                      className="custom-input"
+                      className={`custom-input ${
+                        errors.nome ? "is-invalid" : ""
+                      }`}
                       placeholder="Seu nome"
                     />
+                    {errors.nome && (
+                      <div className="text-danger small mt-1">
+                        {errors.nome[0]}
+                      </div>
+                    )}
                   </Col>
+
                   <Col md={6}>
                     <Form.Label className="text-secondary small mb-1">
                       Telefone
                     </Form.Label>
                     <Form.Control
-                      type="text"
-                      className="custom-input"
-                      placeholder="(11) 99999-9999"
+                      id="contact_phone"
+                      type="tel"
+                      className={`custom-input ${
+                        errors.telefone ? "is-invalid" : ""
+                      }`}
+                      placeholder="11999999999"
+                      onInput={(e) =>
+                        (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                      }
                     />
+                    {errors.telefone && (
+                      <div className="text-danger small mt-1">
+                        {errors.telefone[0]}
+                      </div>
+                    )}
                   </Col>
-                  <Col xs={12} className="mt-3">
+
+                  <Col xs={12}>
                     <Form.Label className="text-secondary small mb-1">
                       Email
                     </Form.Label>
                     <Form.Control
+                      id="contact_email"
                       type="email"
-                      className="custom-input"
+                      className={`custom-input ${
+                        errors.email ? "is-invalid" : ""
+                      }`}
                       placeholder="seu@email.com"
                     />
+                    {errors.email && (
+                      <div className="text-danger small mt-1">
+                        {errors.email[0]}
+                      </div>
+                    )}
                   </Col>
-                  <Col xs={12} className="mt-3">
+
+                  <Col xs={12}>
                     <Form.Label className="text-secondary small mb-1">
                       Qual seu objetivo?
                     </Form.Label>
                     <Form.Control
+                      id="contact_objective"
                       as="textarea"
                       rows={6}
-                      className="custom-input"
-                      placeholder="Conte seus objetivos..."
+                      className={`custom-input ${
+                        errors.objetivo ? "is-invalid" : ""
+                      }`}
+                      placeholder="Ex: Emagrecimento, Hipertrofia..."
                     />
+                    {errors.objetivo && (
+                      <div className="text-danger small mt-1">
+                        {errors.objetivo[0]}
+                      </div>
+                    )}
                   </Col>
+
                   <Col xs={12} className="mt-4">
-                    <ButtonPoseidon type="primary" className="w-100 py-3">
-                      Enviar Mensagem
+                    {/* Note: Aqui usamos type="submit" para disparar o formulário */}
+                    <ButtonPoseidon
+                      type="submit"
+                      className="w-100 py-3 text-uppercase fw-bold"
+                    >
+                      Enviar via WhatsApp
                     </ButtonPoseidon>
                   </Col>
                 </Row>
