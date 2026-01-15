@@ -126,7 +126,7 @@ const Services = () => {
             Escolha seu <span>Plano</span>
           </h2>
           <p className="services__text mx-auto text-secondary">
-            Invista em você com acompanhamento pprofissional e resultados
+            Invista em você com acompanhamento profissional e resultados
             garantidos.
           </p>
         </div>
@@ -273,9 +273,8 @@ const Services = () => {
           </Form.Group>
 
           <ButtonPoseidon
-            type="primary"
-            className="w-100 fw-bold py-3 text-uppercase"
             type="submit"
+            className="w-100 fw-bold py-3 text-uppercase btn-primary-poseidon" // Adicione a classe de estilo aqui
           >
             Ir para Pagamento Seguro
           </ButtonPoseidon>
