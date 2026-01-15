@@ -126,7 +126,7 @@ const Services = () => {
             Escolha seu <span>Plano</span>
           </h2>
           <p className="services__text mx-auto text-secondary">
-            Invista em você com acompanhamento profissional e resultados
+            Invista em você com acompanhamento pprofissional e resultados
             garantidos.
           </p>
         </div>
