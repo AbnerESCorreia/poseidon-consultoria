@@ -16,11 +16,13 @@ const Services = () => {
       price: "70",
       trimestral: "189",
       semestral: "336",
+      description:
+        "Para iniciantes: treino já montado para quem nunca treinou.", // Adicionado
       features: [
-        { text: "Treino Estruturado", included: true },
-        { text: "Direcionamento Inicial", included: true },
-        { text: "Avaliação Física", included: false },
-        { text: "Dieta Personalizada", included: false },
+        { text: "Treino já montado", included: true },
+        { text: "Direcionamento inicial", included: true },
+        { text: "Avaliação física", included: false },
+        { text: "Dieta personalizada", included: false },
       ],
       recommended: false,
     },
@@ -29,12 +31,14 @@ const Services = () => {
       price: "150",
       trimestral: "405",
       semestral: "720",
+      description:
+        "Para quem quer resultados com treino personalizado para seu objetivo.", // Adicionado
       features: [
-        { text: "Avaliação Física Online", included: true },
-        { text: "Treino Personalizado", included: true },
-        { text: "Suporte Online", included: true },
-        { text: "Ajustes de Treino", included: true },
-        { text: "Dieta Personalizada", included: false },
+        { text: "Avaliação física online", included: true },
+        { text: "Treino personalizado", included: true },
+        { text: "Suporte online", included: true },
+        { text: "Ajustes de treino", included: true },
+        { text: "Dieta personalizada", included: false },
       ],
       recommended: true,
     },
@@ -43,12 +47,14 @@ const Services = () => {
       price: "230",
       trimestral: "621",
       semestral: "1.104",
+      description:
+        "Para você que quer ainda mais resultados e suporte completo.", // Adicionado
       features: [
-        { text: "Avaliação Completa", included: true },
-        { text: "Treino + Dieta Individual", included: true },
-        { text: "Ajustes Frequentes", included: true },
-        { text: "Suporte Exclusivo", included: true },
-        { text: "Acompanhamento Contínuo", included: true },
+        { text: "Avaliação completa", included: true },
+        { text: "Treino + Dieta individual", included: true },
+        { text: "Ajustes frequentes", included: true },
+        { text: "Suporte exclusivo", included: true },
+        { text: "Acompanhamento contínuo", included: true },
       ],
       recommended: false,
     },
@@ -175,6 +181,10 @@ const Services = () => {
                 >
                   Assinar Agora
                 </ButtonPoseidon>
+
+                <p className="service-card__description mt-3 mb-0 text-center small text-secondary italic">
+                  {plan.description}
+                </p>
               </div>
             </Col>
           ))}
