@@ -16,8 +16,7 @@ const Services = () => {
       price: "70",
       trimestral: "189",
       semestral: "336",
-      description:
-        "Para iniciantes: treino já montado para quem nunca treinou.", // Adicionado
+      description: "Treino já montado para quem nunca treinou.",
       features: [
         { text: "Treino já montado", included: true },
         { text: "Direcionamento inicial", included: true },
@@ -32,7 +31,7 @@ const Services = () => {
       trimestral: "405",
       semestral: "720",
       description:
-        "Para quem quer resultados com treino personalizado para seu objetivo.", // Adicionado
+        "Para quem quer resultados com treino personalizado para seu objetivo.",
       features: [
         { text: "Avaliação física online", included: true },
         { text: "Treino personalizado", included: true },
@@ -48,7 +47,7 @@ const Services = () => {
       trimestral: "621",
       semestral: "1.104",
       description:
-        "Para você que quer ainda mais resultados e suporte completo.", // Adicionado
+        "Para você que quer ainda mais resultados e suporte completo.",
       features: [
         { text: "Avaliação completa", included: true },
         { text: "Treino + Dieta individual", included: true },
@@ -182,7 +181,7 @@ const Services = () => {
                   Assinar Agora
                 </ButtonPoseidon>
 
-                <p className="service-card__description mt-3 mb-0 text-center small text-secondary italic">
+                <p className="service-card__description mt-3 mb-0 text-center small text-secondary text-white">
                   {plan.description}
                 </p>
               </div>

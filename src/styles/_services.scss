@@ -58,7 +58,9 @@
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
     position: relative; // Âncora para o badge
 
     &:hover {
@@ -70,9 +72,21 @@
       color: $gray-400;
     }
 
+    &__description {
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
     &--recommended {
       border: 2px solid $poseidon-yellow;
       background: rgba($poseidon-yellow, 0.05);
+
+      .service-card__description {
+        color: $poseidon-yellow !important;
+        font-weight: 600;
+        opacity: 1;
+      }
     }
 
     // Badge movido para DENTRO do service-card
