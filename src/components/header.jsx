@@ -31,13 +31,13 @@ const Header = () => {
           <Nav className="mx-auto nav-links-container">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#about">Sobre</Nav.Link>
-            <Nav.Link href="#services">Serviços</Nav.Link>
+            <Nav.Link href="#services">Planos</Nav.Link>
             <Nav.Link href="#testimonials">Depoimentos</Nav.Link>
             <Nav.Link href="#contact">Contato</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link
-              href="https://wa.me/5511977129082"
+              href="https://wa.me/5511947912020"
               target="_blank"
               className="p-0"
             >

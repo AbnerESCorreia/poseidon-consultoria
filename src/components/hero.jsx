@@ -31,8 +31,26 @@ const Hero = () => {
         </p>
 
         <div className="d-flex gap-3 mt-4">
-          <ButtonPoseidon type="primary">Agende sua Avaliação</ButtonPoseidon>
-          <ButtonPoseidon type="secondary">Conheça os Planos</ButtonPoseidon>
+          <ButtonPoseidon
+            type="primary"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Agende sua Avaliação
+          </ButtonPoseidon>
+          <ButtonPoseidon
+            type="secondary"
+            onClick={() =>
+              document
+                .getElementById("servicos")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Conheça os Planos
+          </ButtonPoseidon>
         </div>
 
         <hr className="hero__divider mt-4 mb-2 opacity-25" />

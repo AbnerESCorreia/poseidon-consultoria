@@ -33,8 +33,8 @@ const Contact = () => {
     {
       icon: <RiWhatsappLine />,
       label: "WhatsApp",
-      value: "+55 11 97712-9082",
-      link: "https://wa.me/5511977129082",
+      value: "+55 11 11947912020",
+      link: "https://wa.me/5511947912020",
     },
     {
       icon: <RiMailLine />,
@@ -77,7 +77,7 @@ const Contact = () => {
       `📧 *Email:* ${data.email}%0A` +
       `🎯 *Objetivo:* ${data.objetivo}`;
 
-    const meuWhats = "5511977129082";
+    const meuWhats = "5511947912020";
     window.open(`https://wa.me/${meuWhats}?text=${msg}`, "_blank");
   };
 
@@ -120,7 +120,6 @@ const Contact = () => {
             </div>
           </Col>
 
-          {/* Coluna da Direita (Card de Formulário) */}
           <Col lg={6}>
             <Card className="contact-card border-0 p-4 p-md-5 h-100 shadow-lg">
               <h4 className="text-white mb-4 mt-0">Envie uma mensagem</h4>
@@ -210,7 +209,6 @@ const Contact = () => {
                   </Col>
 
                   <Col xs={12} className="mt-4">
-                    {/* Note: Aqui usamos type="submit" para disparar o formulário */}
                     <ButtonPoseidon
                       type="submit"
                       className="w-100 py-3 text-uppercase fw-bold"

@@ -112,7 +112,7 @@ const Services = () => {
       `---%0A` +
       `_Favor enviar o link de pagamento da InfinitePay._`;
 
-    const seuNumero = "5511977129082";
+    const seuNumero = "5511947912020";
     window.open(`https://wa.me/${seuNumero}?text=${mensagem}`, "_blank");
   };
 
