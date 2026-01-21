@@ -1,8 +1,8 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { FaQuoteRight, FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 // Importando as imagens (Certifique-se de que os nomes dos arquivos estão corretos na pasta assets)
 import resultado1 from "../assets/resultado1.jpeg";
