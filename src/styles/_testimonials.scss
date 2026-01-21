@@ -2,7 +2,7 @@
 
 .testimonials {
   background-color: $poseidon-blue;
-  padding: 0px 0;
+  padding: 80px 0; // Ajustado para dar mais respiro à seção
   position: relative;
 
   &__badge {
@@ -12,41 +12,95 @@
   }
 
   &__text {
-    color: rgba($poseidon-white, 0.7);
+    color: rgba(255, 255, 255, 0.7);
     max-width: 550px;
   }
 
   &__title {
-    color: $poseidon-white;
+    color: white;
     span {
       color: $poseidon-yellow;
     }
   }
 
-  h2 {
-    color: #ffffff;
-    font-weight: 700;
-  }
-
-  .swiper {
+  // --- CONFIGURAÇÃO DO SLIDER CONTÍNUO (ESTEIRA) ---
+  .continuous-slider {
     .swiper-wrapper {
-      display: flex;
+      // O segredo do fluxo contínuo sem paradas
+      transition-timing-function: linear !important;
+    }
+
+    .swiper-slide {
+      height: auto;
     }
   }
 
-  .swiper-slide {
-    height: auto;
-    display: flex;
+  // --- CARD DE ANTES E DEPOIS ---
+  .transformation-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+    background: #000;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 380px; // Altura fixa para manter o padrão no slider
+      object-fit: cover;
+      display: block;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      border-color: $poseidon-yellow;
+      z-index: 10;
+    }
+
+    .transformation-overlay {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+      z-index: 2;
+
+      .badge-before,
+      .badge-after {
+        padding: 4px 12px;
+        font-size: 0.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 4px;
+        backdrop-filter: blur(4px);
+      }
+
+      .badge-before {
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+      }
+
+      .badge-after {
+        background: $poseidon-yellow;
+        color: black;
+      }
+    }
   }
 
+  // --- CARDS DE DEPOIMENTOS (TEXTO) ---
   .testimonial-card {
     background-color: #012340;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2.5rem;
-
     display: flex;
     flex-direction: column;
+    height: 100%;
     transition: all 0.3s ease;
     cursor: grab;
 
@@ -79,12 +133,6 @@
       flex-grow: 1;
     }
 
-    .avatar-info {
-      margin-top: auto;
-      display: flex;
-      align-items: center;
-    }
-
     .avatar-circle {
       width: 50px;
       height: 50px;
@@ -101,7 +149,7 @@
     }
 
     h6 {
-      color: #ffffff;
+      color: white;
       margin-bottom: 2px;
       font-weight: 600;
     }
@@ -111,6 +159,7 @@
     }
   }
 
+  // --- PAGINAÇÃO E CONTROLES ---
   .swiper-pagination {
     bottom: 0;
   }
@@ -128,5 +177,9 @@
       background: $poseidon-yellow;
       width: 35px;
     }
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.1);
   }
 }

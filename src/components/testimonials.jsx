@@ -1,10 +1,33 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaQuoteRight, FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+
+// Importando as imagens (Certifique-se de que os nomes dos arquivos estão corretos na pasta assets)
+import resultado1 from "../assets/resultado1.jpeg";
+import resultado2 from "../assets/resultado2.jpeg";
+import resultado3 from "../assets/resultado3.jpeg";
+import resultado4 from "../assets/resultado4.jpeg";
+import resultado5 from "../assets/resultado5.jpeg";
+import resultado6 from "../assets/resultado6.jpeg";
+import resultado7 from "../assets/resultado7.jpeg";
+import resultado8 from "../assets/resultado8.jpeg";
+
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const transformations = [
+  { img: resultado1, label: "Evolução 1" },
+  { img: resultado2, label: "Evolução 2" },
+  { img: resultado3, label: "Evolução 3" },
+  { img: resultado4, label: "Evolução 4" },
+  { img: resultado5, label: "Evolução 5" },
+  { img: resultado6, label: "Evolução 6" },
+  { img: resultado7, label: "Evolução 7" },
+  { img: resultado8, label: "Evolução 8" },
+];
 
 const testimonials = [
   {
@@ -50,16 +73,50 @@ const Testimonials = () => {
     <section className="testimonials py-5">
       <Container className="py-5 text-center">
         <h6 className="testimonials__badge fw-bold text-uppercase mb-3">
-          Depoimentos
+          Resultados e Depoimentos
         </h6>
-        <h2 className="display-5 fw-bold text-white">
-          O que meus alunos dizem
+        <h2 className="display-5 fw-bold text-white mb-4">
+          Transformações <span>Reais</span>
         </h2>
-        <p className="testimonials__text lead mx-auto text-secondary">
-          Treinos personalizados, acompanhamento nutricional e resultados reais.
-          Alcance seus objetivos com orientação profissional.
-        </p>
 
+        {/* --- SEÇÃO DE ANTES E DEPOIS (VISUAL) --- */}
+        <Swiper
+          modules={[Autoplay]} // Removi Navigation aqui para o fluxo ser 100% automático e limpo
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+          speed={5000} // Velocidade da transição em milissegundos (5 segundos para atravessar)
+          autoplay={{
+            delay: 0, // 0 delay para não parar
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 }, // Aumentei para 4 para o efeito contínuo ficar mais visível
+          }}
+          className="continuous-slider mb-5"
+        >
+          {transformations.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="transformation-card">
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="img-fluid rounded-4"
+                />
+                <div className="transformation-overlay">
+                  <span className="badge-before">Antes</span>
+                  <span className="badge-after">Depois</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <hr className="my-5 opacity-10" />
+
+        {/* --- SEÇÃO DE TEXTO (O que já existia) --- */}
+        <h3 className="text-white fw-bold mb-4">O que meus alunos dizem</h3>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
@@ -71,8 +128,7 @@ const Testimonials = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          autoHeight={false}
-          className="pb-5 pt-5"
+          className="pb-5"
         >
           {testimonials.map((t, index) => (
             <SwiperSlide key={index}>
@@ -85,11 +141,9 @@ const Testimonials = () => {
                   </div>
                   <FaQuoteRight className="quote-icon opacity-25" size={24} />
                 </div>
-
                 <p className="testimonial-text text-light opacity-75 mb-4">
                   {t.text}
                 </p>
-
                 <div className="d-flex align-items-center mt-auto">
                   <div className="avatar-circle me-3">{t.initial}</div>
                   <div>
