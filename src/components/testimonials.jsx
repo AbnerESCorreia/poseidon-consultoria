@@ -38,7 +38,7 @@ const testimonials = [
   },
   {
     name: "Carlos Eduardo",
-    role: "Dev",
+    role: "Dev-Front",
     initial: "C",
     text: '"Finalmente encontrei um profissional que entendeu meu ritmo. Resultados reais sem sofrer."',
   },
