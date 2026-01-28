@@ -56,7 +56,7 @@ const testimonials = [
   },
   {
     name: "Juliana Lins",
-    role: "Médica",
+    role: "Corretor",
     initial: "J",
     text: '"Protocolo sério e baseado em ciência. Exatamente o que eu procurava para minha saúde."',
   },
